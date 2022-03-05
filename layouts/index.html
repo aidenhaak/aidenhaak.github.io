@@ -1,13 +1,11 @@
 {{ define "main" }}
-  <main aria-role="main">
-    {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
-    {{ range $paginator.Pages }}
-      <article>
-        <h1 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
-        {{ .Content }}
-      </article>
-    {{ end }}
-    {{ partial "pagination.html" . }}
-  </main>
+  {{ $paginator := .Paginate (where .Site.Pages "Type" "post") }}
+  {{ range $paginator.Pages }}
+    <article>
+      <h1 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+      {{ .Content }}
+    </article>
+  {{ end }}
+  {{ partial "pagination.html" . }}
 {{ end }}
