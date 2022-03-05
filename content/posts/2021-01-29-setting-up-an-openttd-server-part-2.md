@@ -62,7 +62,7 @@ We need to add a [firewall rule](https://console.cloud.google.com/networking/fir
 
 <img class="post-img" src="/images/openttd-firewall.png" alt="OpenTTD firewall setup" title="OpenTTD Firewall Setup"/>
 
-### Putting It All Together
+## Putting It All Together
 
 Now it's time to create a new VM instance but there are a few settings that need to be configured. Firstly, make sure to use a Ubuntu image and then assign a public IP to your instance to ensure that it is reachable over the public internet.
 

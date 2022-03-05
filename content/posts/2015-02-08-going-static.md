@@ -6,7 +6,7 @@ draft: false
 type: post
 ---
 
-By now you may have noticed the new décor of my site - the even more observant of you may have also noticed that my blog has migrated [Wordpress](https://wordpress.org/) to [Jekyll](http://jekyllrb.com/).
+By now you may have noticed the new décor of my site - the even more observant of you may have also noticed that my blog has migrated from [Wordpress](https://wordpress.org/) to [Jekyll](http://jekyllrb.com/).
 
 Besides the fact that all the cool kids have been moving their blogs away from Wordpress, there were three main reasons for the switch:
 
