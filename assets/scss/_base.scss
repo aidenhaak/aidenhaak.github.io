@@ -1,0 +1,89 @@
+a {
+    color: $hyperlink-color;
+    text-decoration: none;
+  
+    strong {
+        color: inherit;
+    }
+  
+    /* `:focus` is linked to `:hover` for basic accessibility */
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+@mixin heading-appearance($margin-top, $font-size) {
+    margin-top: $margin-top;
+    font-size: $font-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: $title-font;
+    font-weight: bold;
+    line-height: 1.25;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+    @include heading-appearance(0, 2rem);
+}
+
+h2 {
+    @include heading-appearance(1rem, 1.5rem);
+}
+
+h3 {
+    @include heading-appearance(1.5rem, 1.25rem);
+}
+
+h4, h5, h6 {
+    @include heading-appearance(1rem, 1rem);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    margin: 0 0 1rem;
+}
+
+blockquote {
+    padding: 0rem 1.25rem;
+    overflow: auto;
+    background-color: $blockquote-bg-color;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 50rem;
+    padding-left:  1rem;
+    padding-right: 1rem;
+    position: relative;
+}
+  
+.content {
+    padding-top:    2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* Tables */
+table {
+    margin-bottom: 1rem;
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    border-collapse: collapse;
+}
+  
+td,
+th {
+    padding: .25rem .5rem;
+    border: 1px solid #e5e5e5;
+}
+  
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+    background-color: #f9f9f9;
+}
+  

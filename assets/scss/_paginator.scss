@@ -1,0 +1,30 @@
+ul.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+
+    li.page-item:first-child {
+        border-width: 1px;
+    }
+
+    li.page-item {  
+        border: #ddd solid 1px;
+        border-width: 1px 1px 1px 0;
+        padding: 0 0.6em;
+
+        a {
+            text-decoration: none;
+        }
+
+        &:hover {
+            color: scale-color($theme-color, $lightness: 80%);
+            background-color: scale-color($theme-color, $lightness: 80%);
+        }
+
+        &.active {
+            background-color: $theme-color;
+            color: $footer-link-color;
+        } 
+    }
+}

@@ -1,0 +1,11 @@
+/* ABOUT */
+{{ .Site.Params.title }}
+{{ if .Site.Params.twitter }}
+Twitter: 	{{ .Site.Params.twitter }}
+{{ end }}
+
+/* SITE */
+Language: 	English
+Built with: ♥	
+            Hugo <https://gohugo.io/>
+            SASS <http://sass-lang.com>

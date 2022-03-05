@@ -1,0 +1,24 @@
+header {
+    text-align: center;
+    color: $header-color;
+    background-color: $header-bg-color;
+    padding: 2rem 1rem;
+  
+    a {
+        color: $header-link-color;
+
+        &:hover,
+        &:focus {
+            color: $header-color;
+            text-decoration: none;
+        }
+    }
+}
+  
+h1.site-title {
+    color: $header-link-color;
+    margin-top: 0;
+    font-family: $header-font;
+    font-size: 3rem;
+    font-weight: normal;
+}

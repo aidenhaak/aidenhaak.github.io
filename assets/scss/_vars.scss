@@ -1,0 +1,71 @@
+$theme-color: #202020;
+$theme-text-color: scale-color($theme-color, $lightness: 70%);
+$theme-link-color: white;
+
+$body-color: black;
+$body-bg-color: white; 
+$blockquote-bg-color: scale-color($body-bg-color, $lightness: -5%);
+$code-bg-color: $blockquote-bg-color;
+
+$footer-color: $theme-text-color;
+$footer-bg-color: $theme-color;
+$footer-link-color: $theme-link-color;
+$footer-height: 10rem;
+
+$header-color: $theme-text-color;
+$header-bg-color: $theme-color;
+$header-link-color: $theme-link-color;
+
+$hyperlink-color: #268bd2;
+
+@font-face {
+    font-family: "Zilla Slab";
+    font-display: swap;
+    src: url("/fonts/ZillaSlab-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Zilla Slab";
+    font-weight: bold;
+    font-display: swap;
+    src: url("/fonts/ZillaSlab-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-display: swap;
+    src: url("/fonts/FiraSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-style: italic;
+    font-display: swap;
+    src: url("/fonts/FiraSans-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+    src: url("/fonts/FiraSans-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    font-weight: bold;
+    font-display: swap;
+    src: url("/fonts/FiraSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Fira Mono";
+    font-display: swap;
+    src: url("/fonts/FiraMono-Regular.ttf") format("truetype");
+}
+
+$header-font: "Zilla Slab", serif;
+$title-font: "Zilla Slab", sans-serif;
+$main-font: "Fira Sans", sans-serif;
+$code-font: "Fira Mono", courier new, monospace;

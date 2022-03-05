@@ -1,0 +1,39 @@
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: $footer-color;
+    background-color: $footer-bg-color;
+    height: $footer-height;
+  
+    .container {
+      max-width: 50%;
+    }
+
+    .copyright {
+      text-align: center;
+    }
+
+    a {
+      color: $footer-link-color;
+
+      &:hover {
+        text-decoration: none;
+        color: $footer-color;
+      }
+    }
+  }
+  
+  .footer-push {
+    height: $footer-height;
+  }
+  
+  .footer-wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto (-$footer-height);
+  }
+  

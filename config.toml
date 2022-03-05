@@ -1,0 +1,31 @@
+baseURL = "https://www.aidenhaak.com/"
+languageCode = "en-us"
+title = "Aiden Haak"
+
+Paginate = 5
+pygmentsStyle = "monokailight"
+enableRobotsTXT = true
+relativeURLs = true
+
+googleAnalytics = "UA-46856604-2"
+disqusShortname = "aidenhaak"
+
+disableKinds = ["section", "taxonomy", "taxonomyTerm"]
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+
+[params]
+  author = "Aiden Haak"
+  description = "A cavalcade of sarcasm and various ramblings on tech, programming, and Oxford commas."
+  twitter = "https://twitter.com/aidenhaak"
+  github = "https://github.com/aidenhaak/"
+  env = "development" # "development" | "production"
+
+[blackfriday] 
+  plainIDAnchors = false
+
+[permalinks]
+  posts = "/:year/:month/:day/:title/"

@@ -1,0 +1,28 @@
+<head>
+    <meta name="description" content="{{.Description | default .Site.Params.Description}}">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta charset="UTF-8"/>
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+
+    <link rel="preload" href="/fonts/ZillaSlab-SemiBold.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/ZillaSlab-Bold.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/FiraSans-Regular.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/FiraSans-Italic.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/FiraSans-BoldItalic.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/FiraSans-Bold.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/fonts/FiraMono-Regular.ttf" as="font" crossorigin="anonymous" />
+
+    {{ $sass := resources.Get "scss/main.scss" }}
+    {{ $style := $sass | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/schema.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+       {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}  
+</head>
